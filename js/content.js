@@ -94,7 +94,7 @@ const CONTENT = {
         "「サインアップ」を押すと、下の画面が出ます。左は仕事を頼む人（採用する側）、右は仕事を受ける人（フリーランサー）です。仕事を受けたいので、右側の「仕事を探す」を押します。画面は、ブラウザの翻訳機能で日本語にしています。",
         "そのあと、登録の画面が出ます。Googleアカウントを持っていれば、「Googleで続行」で進めます（Appleでも続行できます）。使わない場合は、名前・メール・パスワード・国（日本）を入力します。「やりがいのある仕事や求人情報を見つけるのに役立つメールを送ってください」には、最初からチェックが入っています。メールが不要なら、外しましょう。利用規約とプライバシーポリシーは、読んでから、同意のチェックを入れます。そのあと、画面の案内に沿ってプロフィールなどを入力します。本人確認が必要になります（次のSTEPで説明します）。",
         "登録の途中で、「あなたが従事する仕事の種類」を選ぶ画面が出ます。画面には「完全に一致しなくても構いません。次のステップで詳細を追加できます」と書かれています。",
-        "日本語の翻訳や校正をしたい場合は、「Translation」が一番近いカテゴリです。電話予約の代行や旅行の手配のように、ぴったり合うカテゴリが見当たらない仕事は、画面に出ている中で近いものを選びます。この画面で見えた選択肢は、Engineering & Architecture、IT & Networking、Legal、Sales & Marketing、Translation、Web, Mobile & Software Dev、Writing でした（一覧は、上下にスクロールできます）。",
+        "日本語の翻訳や校正をしたい場合は、「Translation」が一番近いカテゴリです。電話予約の代行や旅行の手配のように、ぴったり合うカテゴリが見当たらない仕事は、画面に出ている中で近いものを選びます。この画面で見えた選択肢は、Engineering & Architecture、IT & Networking、Legal、Sales & Marketing、Translation、Web, Mobile & Software Dev、Writing でした（一覧は、上下にスクロールできます）。「Translation」を選ぶと、下に、さらに細かい2つのチェック欄が出ます。「Translation & Localization Services」は翻訳・ローカライズ（その国向けに内容を整えること）、「Language Tutoring & Interpretation」は語学の指導と通訳です。翻訳や校正をしたいなら、前者にチェックを入れます。通訳（電話の通訳など）や、日本語を教える仕事をしたいなら、後者にチェックを入れます。チェック欄なので、両方に入れられる形です。",
       ],
       list: [],
       figures: [
@@ -114,6 +114,12 @@ const CONTENT = {
           src: "assets/images/upwork-category.jpg",
           alt: "Upworkの登録中の画面。「あなたが従事する仕事の種類」の下で、カテゴリの一覧が開き、Engineering & Architecture、IT & Networking、Legal、Sales & Marketing、Translation、Web, Mobile & Software Dev、Writing が並んでいる",
           caption: "カテゴリを選ぶ画面（ブラウザの翻訳で日本語にしています）。",
+          zoom: true,
+        },
+        {
+          src: "assets/images/upwork-subcategory.jpg",
+          alt: "カテゴリに「Translation」を選んだあとの画面。下に、「Language Tutoring & Interpretation」と「Translation & Localization Services」の2つのチェック欄が並んでいる",
+          caption: "「Translation」を選ぶと、下に2つのチェック欄が出ます。",
           zoom: true,
         },
       ],
