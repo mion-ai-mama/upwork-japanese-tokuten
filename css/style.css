@@ -261,3 +261,9 @@ a:focus-visible, button:focus-visible {
 
 /* 画面収録の解説動画は、画面の文字が読めるよう少し広く表示する */
 .hero__video--wide { max-width: 720px; }
+
+/* 手順と画面を交互に並べる */
+.flow { margin: 0 0 32px; }
+.flow__text { display: flex; gap: 12px; align-items: flex-start; margin: 0 0 12px; font-weight: 500; color: var(--c-ink); }
+.flow__no { flex: 0 0 28px; height: 28px; border-radius: 50%; background: var(--c-taupe); color: #fff; font-size: 14px; line-height: 28px; text-align: center; }
+.flow .figure { margin-top: 0; }

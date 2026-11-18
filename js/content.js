@@ -62,7 +62,7 @@ const CONTENT = {
       lead: "日本語が使えることが、そのまま強みになるお仕事があります。",
       paragraphs: [
         "たとえば、日本に旅行に来る外国の人のために、日本のレストランへ日本語で電話して、予約をする仕事があります。このほかにも、日本語の音声の確認や録音、日本語の翻訳、校正などの募集があります。",
-        "どれも、英語がすらすらでなくても、日本語を使う場面が中心です。ただし、依頼主とのやりとりは英語になります。そこはChatGPTに手伝ってもらいます（STEP 05）。",
+        "どれも、英語がすらすらでなくても、日本語を使う場面が中心です。ただし、依頼主とのやりとりは英語になります。そこはChatGPTに手伝ってもらいます（STEP 06）。",
       ],
       list: [
         "日本のお店や宿への、電話での予約や問い合わせ",
@@ -91,89 +91,130 @@ const CONTENT = {
     {
       number: "02",
       title: "Upworkに登録する",
-      lead: "登録は、トップページの「サインアップ」から始めます。",
-      paragraphs: [
-        "「サインアップ」を押すと、下の画面が出ます。左は仕事を頼む人（採用する側）、右は仕事を受ける人（フリーランサー）です。仕事を受けたいので、右側の「仕事を探す」を押します。画面は、ブラウザの翻訳機能で日本語にしています。",
-        "そのあと、登録の画面が出ます。Googleアカウントを持っていれば、「Googleで続行」で進めます（Appleでも続行できます）。使わない場合は、名前・メール・パスワード・国（日本）を入力します。「やりがいのある仕事や求人情報を見つけるのに役立つメールを送ってください」には、最初からチェックが入っています。メールが不要なら、外しましょう。利用規約とプライバシーポリシーは、読んでから、同意のチェックを入れます。そのあと、画面の案内に沿ってプロフィールなどを入力します。本人確認が必要になります（次のSTEPで説明します）。",
-        "登録の途中で、「あなたが従事する仕事の種類」を選ぶ画面が出ます。画面には「完全に一致しなくても構いません。次のステップで詳細を追加できます」と書かれています。",
-        "日本語の翻訳や校正をしたい場合は、「Translation」が一番近いカテゴリです。電話予約の代行や旅行の手配のように、ぴったり合うカテゴリが見当たらない仕事は、画面に出ている中で近いものを選びます。この画面で見えた選択肢は、Engineering & Architecture、IT & Networking、Legal、Sales & Marketing、Translation、Web, Mobile & Software Dev、Writing でした（一覧は、上下にスクロールできます）。「Translation」を選ぶと、下に、さらに細かい2つのチェック欄が出ます。「Translation & Localization Services」は翻訳・ローカライズ（その国向けに内容を整えること）、「Language Tutoring & Interpretation」は語学の指導と通訳です。翻訳や校正をしたいなら、前者にチェックを入れます。通訳（電話の通訳など）や、日本語を教える仕事をしたいなら、後者にチェックを入れます。チェック欄なので、両方に入れられる形です。そのあと、「Skills（スキル）」の欄が出ます。入力欄に文字を入れると、候補が出ます。候補を選ぶと、追加されます（3つ以上、最大15個。あとから変えられます）。追加したスキルは、「×」で消せます。入れるスキルの例は、Japanese、Communications、Virtual Assistance です。旅行の手配や予約の手伝いなら、Travel Planning も合います。できることだけを入れましょう。",
-        "次に、プロフィールの画面が出ます。「Title（肩書き）」と「Introduction（自己紹介）」は必須です。Titleは4文字以上、Introductionは100文字以上です。下の英文をコピーして、自分の内容に書き換えて入れましょう。できないことは消して、実際の経験だけを書きます。時給（Hourly rate）の欄は、STEP 01の募集の例を見て決めます。画面には、金額は応募ごとに調整できると書かれています。手数料を引いた額が、Total earningsに出ます。画面を下に進むと、「Employment history（職歴）」「Education（学歴）」「Language（言語）」が続きます。職歴は、アルバイト・ボランティア・インターンも入れられます（右の「Add employment」）。学歴は、学位でなくても大丈夫です（「Add Education」）。言語は、英語が必須で、どのレベルでもよいと書かれています。「Add language」で「Japanese」を追加して、自分のレベルを選びます。英語のレベルは、実際に近いものを選びましょう。職歴と学歴は、日本語で書いて、ChatGPTに英語にしてもらうと簡単です（下のプロンプト）。職歴の「Add employment」を押すと、入力欄が出ます。Title（肩書き）、Company（会社名。会社に属していない場合は Self-Employed＝自営）、City（市）、Country（国）、「I currently work here（今もここで働いている）」、Start date（開始の月と年）、End date（終了の月と年）、Description（仕事内容・任意）です。「I currently work here」にチェックを入れると、End date は「Present（現在）」になります。また、プロフィールの写真（アイコン）の登録も必要です。",
-
-      ],
+      lead: "トップページの「サインアップ」から始めます。画面は、ブラウザの翻訳で日本語にしています。",
+      paragraphs: [],
       list: [],
-      figures: [
+      flow: [
         {
-          src: "assets/images/upwork-signup.jpg",
-          alt: "Upworkのサインアップ画面。左に「採用募集中」と「採用を開始する」ボタン、右に「私はフリーランサーです」と「仕事を探す」ボタンが並んでいる",
-          caption: "サインアップの最初の画面。仕事を受けるときは、右側の「仕事を探す」を押します。",
-          zoom: true,
+          text: "「サインアップ」を押して、右側の「仕事を探す」を押す",
+          figure: {
+            src: "assets/images/upwork-signup.jpg",
+            alt: "Upworkのサインアップ画面。左に「採用募集中」と「採用を開始する」ボタン、右に「私はフリーランサーです」と「仕事を探す」ボタンが並んでいる",
+            caption: "右側の「仕事を探す」を押します。",
+            zoom: true,
+          },
         },
         {
-          src: "assets/images/upwork-register-form.jpg",
-          alt: "Upworkの登録画面。「登録して、好きな仕事を見つけよう」の下に、「Appleで続行」と「Googleで続行」のボタン、その下に、ファーストネーム・苗字・メール・パスワード・国（日本）の入力欄と、メールの受け取りと利用規約への同意のチェック欄がある",
-          caption: "登録の画面（ブラウザの翻訳で日本語にしています。お名前とメールアドレスは隠しています）。",
-          zoom: true,
+          text: "Googleアカウントがあれば「Googleで続行」。使わないときは、名前・メール・パスワード・国（日本）を入れる。メールのチェックは不要なら外し、利用規約は読んでから同意する",
+          figure: {
+            src: "assets/images/upwork-register-form.jpg",
+            alt: "Upworkの登録画面。「Appleで続行」と「Googleで続行」のボタン、その下に、ファーストネーム・苗字・メール・パスワード・国（日本）の入力欄と、メールの受け取りと利用規約への同意のチェック欄がある",
+            caption: "登録の画面。お名前とメールアドレスは隠しています。",
+            zoom: true,
+          },
         },
         {
-          src: "assets/images/upwork-category.jpg",
-          alt: "Upworkの登録中の画面。「あなたが従事する仕事の種類」の下で、カテゴリの一覧が開き、Engineering & Architecture、IT & Networking、Legal、Sales & Marketing、Translation、Web, Mobile & Software Dev、Writing が並んでいる",
-          caption: "カテゴリを選ぶ画面（ブラウザの翻訳で日本語にしています）。",
-          zoom: true,
+          text: "仕事の種類（カテゴリ）は「Translation」。ぴったり合わなくても、近いものでOK",
+          figure: {
+            src: "assets/images/upwork-category.jpg",
+            alt: "「あなたが従事する仕事の種類」の下で、カテゴリの一覧が開き、Engineering & Architecture、IT & Networking、Legal、Sales & Marketing、Translation、Web, Mobile & Software Dev、Writing が並んでいる",
+            caption: "カテゴリの一覧から「Translation」を選びます。",
+            zoom: true,
+          },
         },
         {
-          src: "assets/images/upwork-subcategory.jpg",
-          alt: "カテゴリに「Translation」を選んだあとの画面。下に、「Language Tutoring & Interpretation」と「Translation & Localization Services」の2つのチェック欄が並んでいる",
-          caption: "「Translation」を選ぶと、下に2つのチェック欄が出ます。",
-          zoom: true,
-        },
-        {
-          src: "assets/images/upwork-skills.jpg",
-          alt: "スキル入力の画面。「Skills」の下の入力欄に、Japanese、Communications、Virtual Assistance の3つが追加されていて、右下に「3/15 skills」と出ている。下に、Tutoring と Live Interpretation の候補が並んでいる",
-          caption: "スキルを入れる画面（英語のままです）。3つ追加した状態です。",
-          zoom: true,
-        },
-        {
-          src: "assets/images/upwork-profile.jpg",
-          alt: "プロフィール入力の画面。「About you」の下に、必須のTitle（4文字以上）とIntroduction（100文字以上）の入力欄、その下にHourly rate（時給）の欄がある。左に、About you、Hourly rate、Employment history、Education、Languageのメニューが並んでいる",
-          caption: "プロフィールの入力画面（英語のままです）。TitleとIntroductionは必須です。",
-          zoom: true,
-        },
-        {
-          src: "assets/images/upwork-profile2.jpg",
-          alt: "プロフィール入力の続きの画面。Employment history、Education、Languageの3つの項目があり、それぞれ右に「Add employment」「Add Education」「Add language」のボタンがある。Languageには「English（必須）」と、レベルを選ぶ欄がある",
-          caption: "プロフィールの続き（英語のままです）。職歴・学歴・言語を入れます。",
-          zoom: true,
-        },
-        {
-          src: "assets/images/upwork-employment-form.jpg",
-          alt: "職歴を追加する画面。Employment historyの下に、Title、Company、City、Country、「I currently work here」のチェック、Start dateとEnd date、Description（任意）の入力欄が並んでいる（入力欄は空にしてある）",
-          caption: "職歴を追加する画面（入力欄は空にしてあります）。",
-          zoom: true,
+          text: "下のチェック欄は、翻訳・校正なら「Translation & Localization Services」、通訳や日本語を教えるなら「Language Tutoring & Interpretation」",
+          figure: {
+            src: "assets/images/upwork-subcategory.jpg",
+            alt: "カテゴリに「Translation」を選んだあとの画面。下に、「Language Tutoring & Interpretation」と「Translation & Localization Services」の2つのチェック欄が並んでいる",
+            caption: "「Translation」を選ぶと、2つのチェック欄が出ます。",
+            zoom: true,
+          },
         },
       ],
-      prompts: [
-        {
-          label: "Title（肩書き）の例",
-          text: "Native Japanese Speaker | Japanese Language Support",
-        },
-        {
-          label: "職歴・学歴を英語にしてもらうプロンプト",
-          text: "Upworkのプロフィールに入れる、職歴と学歴を、英語にしてください。\n\n【職歴（日本語でOK）】\n（ここに職歴を日本語で入力）\n例：飲食店のホールのアルバイト。接客、電話での予約の受付\n\n【学歴（日本語でOK）】\n（ここに学歴を日本語で入力）\n例：〇〇大学 〇〇学部 卒業\n\n【作ってほしいもの】\n・職歴：Title（肩書き）、Company（会社名・店名）、Description（1〜2文の仕事内容）\n・学歴：School（学校名）、Degree（学位・卒業の種類）、Field of study（専攻）\n\n【条件】\n・書いていないことは足さない。わからない項目は「要確認」と書く\n・やさしい英語で書く\n・実際にない経験や実績を作らない",
-        },
-        {
-          label: "Introduction（自己紹介）の例",
-          text: "I am a native Japanese speaker living in Japan.\n\nI can help with:\n- Japanese phone calls and bookings in Japan (restaurants, hotels)\n- Checking and proofreading Japanese text\n- Japanese–English messages (I check every detail carefully)\n\nI confirm the details with you before I start, and I report back clearly.\nAvailable: （ここに使える時間を英語で入力。例：weekday mornings, up to 10 hours per week）",
-        },
-      ],
+      figures: [],
+      prompts: [],
       point: {
         label: "登録の前に",
-        text: "アカウントは1人1つです。他の人に使わせたり、他人の名前で登録したりしてはいけません。名前は、身分証と同じにしましょう。Introductionの意味は、「私は日本に住む日本語ネイティブです。お手伝いできるのは、日本での電話予約（レストラン・ホテル）、日本語の文章の確認・校正、日本語と英語のメッセージです。始める前に、内容を確認します。使える時間は〜です」という内容です。",
+        text: "アカウントは1人1つです。他の人に使わせたり、他人の名前で登録したりしてはいけません。名前は、身分証と同じにしましょう。",
         examplesLabel: null,
         examples: [],
       },
     },
     {
       number: "03",
+      title: "プロフィールを入れる",
+      lead: "英語で入力します。英文は、コピーして使えます。",
+      paragraphs: [],
+      list: [],
+      flow: [
+        {
+          text: "Skills（スキル）：入力して、出てくる候補を選ぶ。3つ以上、最大15個。できることだけ入れる",
+          figure: {
+            src: "assets/images/upwork-skills.jpg",
+            alt: "スキル入力の画面。「Skills」の下の入力欄に、Japanese、Communications、Virtual Assistance の3つが追加されていて、右下に「3/15 skills」と出ている。下に、Tutoring と Live Interpretation の候補が並んでいる",
+            caption: "例：Japanese、Communications、Virtual Assistance。旅行の手配なら Travel Planning も。",
+            zoom: true,
+          },
+        },
+        {
+          text: "Title（肩書き）とIntroduction（自己紹介）は必須。下の英文をコピーして、できないことは消す。時給（Hourly rate）は、STEP 01の募集の例を見て決める",
+          figure: {
+            src: "assets/images/upwork-profile.jpg",
+            alt: "プロフィール入力の画面。「About you」の下に、必須のTitle（4文字以上）とIntroduction（100文字以上）の入力欄、その下にHourly rate（時給）の欄がある。左に、About you、Hourly rate、Employment history、Education、Languageのメニューが並んでいる",
+            caption: "Titleは4文字以上、Introductionは100文字以上です。",
+            zoom: true,
+          },
+          prompts: [
+            {
+              label: "Title（肩書き）の例",
+              text: "Native Japanese Speaker | Japanese Language Support",
+            },
+            {
+              label: "Introduction（自己紹介）の例",
+              text: "I am a native Japanese speaker living in Japan.\n\nI can help with:\n- Japanese phone calls and bookings in Japan (restaurants, hotels)\n- Checking and proofreading Japanese text\n- Japanese–English messages (I check every detail carefully)\n\nI confirm the details with you before I start, and I report back clearly.\nAvailable: （ここに使える時間を英語で入力。例：weekday mornings, up to 10 hours per week）",
+            },
+          ],
+        },
+        {
+          text: "職歴（Employment history）と学歴（Education）：日本語で書いて、ChatGPTに英語にしてもらう",
+          figure: {
+            src: "assets/images/upwork-employment-form.jpg",
+            alt: "職歴を追加する画面。Title、Company、City、Country、「I currently work here」のチェック、Start dateとEnd date、Description（任意）の入力欄が並んでいる（入力欄は空にしてある）",
+            caption: "職歴を追加する画面（入力欄は空にしてあります）。Companyは、会社に属していなければ Self-Employed。",
+            zoom: true,
+          },
+          prompts: [
+            {
+              label: "職歴・学歴を英語にしてもらうプロンプト",
+              text: "Upworkのプロフィールに入れる、職歴と学歴を、英語にしてください。\n\n【職歴（日本語でOK）】\n（ここに職歴を日本語で入力）\n例：飲食店のホールのアルバイト。接客、電話での予約の受付\n\n【学歴（日本語でOK）】\n（ここに学歴を日本語で入力）\n例：〇〇大学 〇〇学部 卒業\n\n【作ってほしいもの】\n・職歴：Title（肩書き）、Company（会社名・店名）、Description（1〜2文の仕事内容）\n・学歴：School（学校名）、Degree（学位・卒業の種類）、Field of study（専攻）\n\n【条件】\n・書いていないことは足さない。わからない項目は「要確認」と書く\n・やさしい英語で書く\n・実際にない経験や実績を作らない",
+            },
+          ],
+        },
+        {
+          text: "Language（言語）：英語は必須。「Add language」で Japanese を追加して、レベルを選ぶ。英語のレベルは、実際に近いものを選ぶ",
+          figure: {
+            src: "assets/images/upwork-profile2.jpg",
+            alt: "プロフィール入力の続きの画面。Employment history、Education、Languageの3つの項目があり、それぞれ右に「Add employment」「Add Education」「Add language」のボタンがある。Languageには「English（必須）」と、レベルを選ぶ欄がある",
+            caption: "職歴・学歴・言語の入力欄です。",
+            zoom: true,
+          },
+        },
+        {
+          text: "プロフィールの写真（アイコン）も登録する",
+        },
+      ],
+      figures: [],
+      prompts: [],
+      point: {
+        label: "Introductionの意味",
+        text: "「日本に住む日本語ネイティブです。日本での電話予約、日本語の文章の確認・校正、日本語と英語のメッセージをお手伝いできます」という内容です。このあと、本人確認が必要になります（次のSTEP）。",
+        examplesLabel: null,
+        examples: [],
+      },
+    },
+    {
+      number: "04",
       title: "Upworkの手数料・ルールと、はじめる前に知っておくこと",
       lead: "登録の前に、お金とルールの大事なところだけ確認しておきましょう。",
       paragraphs: [
@@ -197,7 +238,7 @@ const CONTENT = {
       },
     },
     {
-      number: "04",
+      number: "05",
       title: "お仕事を探して、募集文を読み解く",
       lead: "検索のしかたと、英語の募集文をChatGPTに整理してもらう方法です。",
       paragraphs: [
@@ -234,7 +275,7 @@ const CONTENT = {
       },
     },
     {
-      number: "05",
+      number: "06",
       title: "応募メッセージと、英語のやりとり",
       lead: "英語の文章は、ChatGPTに下書きしてもらい、自分で確認して送ります。",
       paragraphs: [
@@ -260,7 +301,7 @@ const CONTENT = {
       },
     },
     {
-      number: "06",
+      number: "07",
       title: "電話予約のお仕事の準備",
       lead: "お店に電話をかける前に、確認することと、話す内容をそろえます。",
       paragraphs: [
@@ -287,7 +328,7 @@ const CONTENT = {
       },
     },
     {
-      number: "07",
+      number: "08",
       title: "報酬の受け取りと、税金",
       lead: "お金の流れと、確定申告の考え方を、おおまかに知っておきましょう。",
       paragraphs: [

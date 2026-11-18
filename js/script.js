@@ -110,6 +110,12 @@
     return `<aside class="point-box"><p class="point-box__label">${p.label}</p><p>${p.text}</p>${ex}${src}</aside>`;
   }
 
+  // 手順と画面を1つずつ交互に並べる（長い文章のあとに画像が続かないようにする）
+  function flowItem(f, id, k) {
+    const prompts = (f.prompts || []).map((p, j) => prompt(p, id + "-flow" + k + "-" + j)).join("");
+    return `<div class="flow"><p class="flow__text"><span class="flow__no" aria-hidden="true">${k + 1}</span><span>${f.text}</span></p>${f.figure ? figure(f.figure) : ""}${(f.figures || []).map(figure).join("")}${prompts}</div>`;
+  }
+
   function step(s, i) {
     const id = "step" + (i + 1);
     const body = (s.paragraphs || []).map((p) => `<p>${p}</p>`).join("");
@@ -126,6 +132,7 @@
         <div class="step__body">
           ${body}
           ${list(s.list, "check-list")}
+          ${(s.flow || []).map((f, k) => flowItem(f, id, k)).join("")}
           ${(s.figures || []).map(figure).join("")}
           ${(s.prompts || []).map((p, k) => prompt(p, id + "-prompt" + k)).join("")}
           ${s.point ? point(s.point) : ""}
