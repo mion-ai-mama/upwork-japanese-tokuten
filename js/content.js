@@ -95,7 +95,7 @@ const CONTENT = {
         "そのあと、登録の画面が出ます。Googleアカウントを持っていれば、「Googleで続行」で進めます（Appleでも続行できます）。使わない場合は、名前・メール・パスワード・国（日本）を入力します。「やりがいのある仕事や求人情報を見つけるのに役立つメールを送ってください」には、最初からチェックが入っています。メールが不要なら、外しましょう。利用規約とプライバシーポリシーは、読んでから、同意のチェックを入れます。そのあと、画面の案内に沿ってプロフィールなどを入力します。本人確認が必要になります（次のSTEPで説明します）。",
         "登録の途中で、「あなたが従事する仕事の種類」を選ぶ画面が出ます。画面には「完全に一致しなくても構いません。次のステップで詳細を追加できます」と書かれています。",
         "日本語の翻訳や校正をしたい場合は、「Translation」が一番近いカテゴリです。電話予約の代行や旅行の手配のように、ぴったり合うカテゴリが見当たらない仕事は、画面に出ている中で近いものを選びます。この画面で見えた選択肢は、Engineering & Architecture、IT & Networking、Legal、Sales & Marketing、Translation、Web, Mobile & Software Dev、Writing でした（一覧は、上下にスクロールできます）。「Translation」を選ぶと、下に、さらに細かい2つのチェック欄が出ます。「Translation & Localization Services」は翻訳・ローカライズ（その国向けに内容を整えること）、「Language Tutoring & Interpretation」は語学の指導と通訳です。翻訳や校正をしたいなら、前者にチェックを入れます。通訳（電話の通訳など）や、日本語を教える仕事をしたいなら、後者にチェックを入れます。チェック欄なので、両方に入れられる形です。そのあと、「Skills（スキル）」の欄が出ます。入力欄に文字を入れると、候補が出ます。候補を選ぶと、追加されます（3つ以上、最大15個。あとから変えられます）。追加したスキルは、「×」で消せます。入れるスキルの例は、Japanese、Communications、Virtual Assistance です。旅行の手配や予約の手伝いなら、Travel Planning も合います。できることだけを入れましょう。",
-        "次に、プロフィールの画面が出ます。「Title（肩書き）」と「Introduction（自己紹介）」は必須です。Titleは4文字以上、Introductionは100文字以上です。下の英文をコピーして、自分の内容に書き換えて入れましょう。できないことは消して、実際の経験だけを書きます。時給（Hourly rate）の欄は、STEP 01の募集の例を見て決めます。画面には、金額は応募ごとに調整できると書かれています。手数料を引いた額が、Total earningsに出ます。左のメニューの「Employment history（職歴）」「Education（学歴）」「Language（言語）」も、入れられるところから進めましょう。",
+        "次に、プロフィールの画面が出ます。「Title（肩書き）」と「Introduction（自己紹介）」は必須です。Titleは4文字以上、Introductionは100文字以上です。下の英文をコピーして、自分の内容に書き換えて入れましょう。できないことは消して、実際の経験だけを書きます。時給（Hourly rate）の欄は、STEP 01の募集の例を見て決めます。画面には、金額は応募ごとに調整できると書かれています。手数料を引いた額が、Total earningsに出ます。画面を下に進むと、「Employment history（職歴）」「Education（学歴）」「Language（言語）」が続きます。職歴は、アルバイト・ボランティア・インターンも入れられます（右の「Add employment」）。学歴は、学位でなくても大丈夫です（「Add Education」）。言語は、英語が必須で、どのレベルでもよいと書かれています。「Add language」で「Japanese」を追加して、自分のレベルを選びます。英語のレベルは、実際に近いものを選びましょう。",
 
       ],
       list: [],
@@ -134,6 +134,12 @@ const CONTENT = {
           src: "assets/images/upwork-profile.jpg",
           alt: "プロフィール入力の画面。「About you」の下に、必須のTitle（4文字以上）とIntroduction（100文字以上）の入力欄、その下にHourly rate（時給）の欄がある。左に、About you、Hourly rate、Employment history、Education、Languageのメニューが並んでいる",
           caption: "プロフィールの入力画面（英語のままです）。TitleとIntroductionは必須です。",
+          zoom: true,
+        },
+        {
+          src: "assets/images/upwork-profile2.jpg",
+          alt: "プロフィール入力の続きの画面。Employment history、Education、Languageの3つの項目があり、それぞれ右に「Add employment」「Add Education」「Add language」のボタンがある。Languageには「English（必須）」と、レベルを選ぶ欄がある",
+          caption: "プロフィールの続き（英語のままです）。職歴・学歴・言語を入れます。",
           zoom: true,
         },
       ],
