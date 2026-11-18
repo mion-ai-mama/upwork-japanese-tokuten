@@ -200,6 +200,7 @@ const CONTENT = {
       lead: "検索のしかたと、英語の募集文をChatGPTに整理してもらう方法です。",
       paragraphs: [
         "Upworkの検索窓に、英語で言葉を入れます。ログインしなくても、検索の結果を見ることができます。",
+        "登録して、ログインすると、おすすめの募集が「ベストマッチ」に出ます。上の「最新」「保存されたジョブ」「招待状」のタブでも見られます。",
       ],
       list: [
         "「Japanese」を入れて、探す（例：Japanese restaurant reservation／Japanese transcription／Japanese translation／Japanese voice／Japanese proofreading）",
@@ -207,8 +208,16 @@ const CONTENT = {
         "「Experience level」の「Entry Level」で、初心者向けの募集に絞る",
         "「Job type」で、時給（Hourly）か、固定（Fixed-Price）かを選ぶ",
         "気になる募集を開いて、全文をコピーして、下のプロンプトに貼る",
+        "一覧で見る点：投稿時間と提案数（応募の数）、時給か固定か、経験レベル、想定期間、スキルのタグ、支払いが確認されているか、評価、これまでの支出、依頼主の国",
       ],
-      figures: [],
+      figures: [
+        {
+          src: "assets/images/upwork-job-list.jpg",
+          alt: "Upworkの募集の一覧（日本語に翻訳した画面）。上に「ベストマッチ」「最新」「保存されたジョブ」「招待状」のタブがある。募集ごとに、投稿時間と提案数、題名、時給とレベル、想定期間、説明、スキルのタグ、支払いの確認、評価、これまでの支出、国が表示されている",
+          caption: "募集の一覧（ブラウザの翻訳で日本語にしています）。1つの募集に、見る点がまとまっています。",
+          zoom: true,
+        },
+      ],
       prompts: [
         {
           label: "① 募集文を日本語にして、条件を整理してもらうプロンプト",
