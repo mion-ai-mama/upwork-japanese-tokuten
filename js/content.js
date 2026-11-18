@@ -93,6 +93,8 @@ const CONTENT = {
       paragraphs: [
         "「サインアップ」を押すと、下の画面が出ます。左は仕事を頼む人（採用する側）、右は仕事を受ける人（フリーランサー）です。仕事を受けたいので、右側の「仕事を探す」を押します。画面は、ブラウザの翻訳機能で日本語にしています。",
         "そのあと、Googleアカウントを持っていれば、Googleで続行できます。画面の案内に沿って、プロフィールなどを入力します。本人確認が必要になります（次のSTEPで説明します）。",
+        "登録の途中で、「あなたが従事する仕事の種類」を選ぶ画面が出ます。画面には「完全に一致しなくても構いません。次のステップで詳細を追加できます」と書かれています。",
+        "日本語の翻訳や校正をしたい場合は、「Translation」が一番近いカテゴリです。電話予約の代行や旅行の手配のように、ぴったり合うカテゴリが見当たらない仕事は、画面に出ている中で近いものを選びます。この画面で見えた選択肢は、Engineering & Architecture、IT & Networking、Legal、Sales & Marketing、Translation、Web, Mobile & Software Dev、Writing でした（一覧は、下にスクロールすると続きがある場合があります）。",
       ],
       list: [],
       figures: [
@@ -100,6 +102,12 @@ const CONTENT = {
           src: "assets/images/upwork-signup.jpg",
           alt: "Upworkのサインアップ画面。左に「採用募集中」と「採用を開始する」ボタン、右に「私はフリーランサーです」と「仕事を探す」ボタンが並んでいる",
           caption: "サインアップの最初の画面。仕事を受けるときは、右側の「仕事を探す」を押します。",
+          zoom: true,
+        },
+        {
+          src: "assets/images/upwork-category.jpg",
+          alt: "Upworkの登録中の画面。「あなたが従事する仕事の種類」の下で、カテゴリの一覧が開き、Engineering & Architecture、IT & Networking、Legal、Sales & Marketing、Translation、Web, Mobile & Software Dev、Writing が並んでいる",
+          caption: "カテゴリを選ぶ画面（ブラウザの翻訳で日本語にしています）。",
           zoom: true,
         },
       ],
